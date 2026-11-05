@@ -1,0 +1,263 @@
+{
+  "info": {
+    "_postman_id": "6f9cb02f-106e-468f-86f0-5327a9c031da",
+    "name": "PF18 - Peluquería de Mascotas",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59010751",
+    "_collection_link": "https://go.postman.co/collection/59010751-6f9cb02f-106e-468f-86f0-5327a9c031da?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Servicios más solicitados",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas/indicadores/servicios-mas-solicitados",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas",
+            "indicadores",
+            "servicios-mas-solicitados"
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Total estimado del día",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas/indicadores/total-estimado/2026-10-20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas",
+            "indicadores",
+            "total-estimado",
+            "2026-10-20"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agenda por fecha",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas/fecha/2026-10-20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas",
+            "fecha",
+            "2026-10-20"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Validación cita duplicada",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreMascota\": \"Toby\",\r\n  \"propietario\": \"Juan Pérez\",\r\n  \"especie\": \"Perro\",\r\n  \"fechaHora\": \"2026-10-20T10:00:00\",\r\n  \"estado\": \"PROGRAMADA\",\r\n  \"servicioId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/citas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cambiar estado a ATENDIDA",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas/2/estado/ATENDIDA",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas",
+            "2",
+            "estado",
+            "ATENDIDA"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cancelar cita",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas/2/cancelar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas",
+            "2",
+            "cancelar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar servicios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/servicios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "servicios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear servicio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Corte de uñas\",\r\n  \"descripcion\": \"Corte y limpieza de uñas\",\r\n  \"precio\": 45.00,\r\n  \"duracionMinutos\": 20,\r\n  \"activo\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/servicios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "servicios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear cita",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreMascota\": \"Max\",\r\n  \"propietario\": \"Carlos Pérez\",\r\n  \"especie\": \"Perro\",\r\n  \"fechaHora\": \"2026-10-21T11:00:00\",\r\n  \"estado\": \"PROGRAMADA\",\r\n  \"servicioId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/citas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar citas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/citas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "citas"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
