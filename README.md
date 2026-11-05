@@ -1,8 +1,9 @@
 # PF-18 — Sistema de Citas para Peluquería de Mascotas
 
-Proyecto final académico de **Programación II** para gestionar servicios de estética para mascotas, registrar y administrar citas, consultar la agenda y visualizar indicadores. Incluye una **API REST en Spring Boot**, persistencia en **PostgreSQL** y una interfaz web desarrollada con **HTML, CSS y JavaScript**.
+Proyecto final de **Programación II** para gestionar servicios de estética para mascotas, registrar y administrar citas, consultar la agenda y visualizar indicadores. Incluye una **API REST en Spring Boot**, persistencia en **PostgreSQL** y una interfaz web desarrollada con **HTML, CSS y JavaScript**.
 
-**Estudiante:** Walter Isaí Villagrán García  
+**Estudiante:** Walter Isaí Villagran Garcia  
+**Canet:** 9941-21-8603
 **Repositorio oficial de entrega:** https://github.com/Walter1612/PROYECTO-FINAL  
 **Última validación documentada:** 5 de noviembre de 2026.
 
