@@ -31,34 +31,6 @@ Proyecto final de **Programación II** para gestionar servicios de estética par
 
 > En las comprobaciones locales del 5 de noviembre de 2026 se utilizó Java 26, Maven Wrapper y PostgreSQL 18.6. No es necesario instalar Maven globalmente si se utiliza `mvnw.cmd`.
 
-## Arquitectura del backend
-
-```text
-src/
-├── main/
-│   ├── java/com/umg/pf18_peluqueria_mascotas/
-│   │   ├── controller/    # Endpoints HTTP
-│   │   ├── service/       # Reglas de negocio
-│   │   ├── repository/    # Consultas JPA
-│   │   ├── entity/        # Entidades y relaciones
-│   │   ├── dto/           # Solicitudes y respuestas
-│   │   └── exception/     # Excepciones y manejo centralizado
-│   └── resources/
-│       ├── application.properties
-│       └── static/       # Frontend
-└── test/java/            # Pruebas automatizadas
-
-database/                 # Estructura y datos ficticios de prueba
-postman/                  # Colección de solicitudes REST
-Evidencias/               # Documento de evidencias
-```
-
-### Modelo de datos
-
-- **`servicio_estetica`**: catálogo de servicios con nombre, descripción, precio, duración y estado activo.
-- **`cita`**: mascota, propietario, especie, fecha y hora, estado y referencia al servicio.
-- Relación **muchas citas a un servicio** (N:1), mediante una clave foránea.
-- Estados de cita: `PROGRAMADA`, `ATENDIDA` y `CANCELADA`.
 
 ## Instalación y ejecución local
 
